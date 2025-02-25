@@ -1,0 +1,162 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #d9a7de, #ffa1d4);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+}
+
+.pomodoro-app {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    animation: slideDown 0.8s ease-out;
+    overflow-y: auto;
+}
+
+.statistics {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 35%;
+    margin-left: 5%;
+    overflow-y: auto;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.timer {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls button {
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #8e44ad;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background-color: #6a1b9a;
+}
+
+.session-info {
+    margin: 15px 0;
+}
+
+.session-info p {
+    font-size: 1.2em;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.timing-options {
+    margin: 20px 0;
+}
+
+.timing-options label {
+    font-size: 1.1em;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.timing-options select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #8e44ad;
+}
+
+.statistics h2 {
+    font-size: 2em;
+    color: #8e44ad;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.statistics p {
+    font-size: 1.2em;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .pomodoro-app, .statistics {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .timer {
+        font-size: 3em;
+    }
+
+    .controls button {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+}
